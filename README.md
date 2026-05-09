@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blog & Yến Sào
 
-## Getting Started
+Blog cá nhân về công nghệ / lập trình kết hợp shop bán yến sào.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Layer | Công nghệ |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 + shadcn/ui |
+| Blog | MDX + Velite |
+| Database | PostgreSQL (Supabase) |
+| ORM | Drizzle ORM |
+| Auth | Clerk |
+| AI | Vercel AI SDK + Claude API (Anthropic) |
+| Email | Resend |
+| Storage | Supabase Storage (ảnh sản phẩm) |
+| Deploy | Vercel |
+
+## Tính năng
+
+- **Blog** — viết bài MDX, search, filter theo tag, RSS feed
+- **Shop** — bán yến sào, giỏ hàng, đặt hàng COD/chuyển khoản
+- **Admin** — quản lý sản phẩm, đơn hàng, thống kê doanh thu
+- **Chatbot AI** — tư vấn yến sào 24/7 bằng Claude
+- **SEO** — sitemap, robots.txt, OG image tự động
+- **Email** — xác nhận đơn hàng qua Resend
+- **Dark mode** — tự động theo system
+
+## Cài đặt local
+
+Xem [docs/local-setup.md](docs/local-setup.md)
+
+## Deploy production
+
+Xem [docs/deploy.md](docs/deploy.md)
+
+## Cấu trúc thư mục
+
+```
+blogs/
+├── app/
+│   ├── (public)/          # Trang người dùng
+│   │   ├── page.tsx       # Trang chủ
+│   │   ├── blog/          # Danh sách + chi tiết bài viết
+│   │   ├── shop/          # Danh sách + chi tiết sản phẩm
+│   │   ├── cart/          # Giỏ hàng + checkout
+│   │   └── about/         # Giới thiệu
+│   ├── (admin)/           # Trang quản trị
+│   │   └── admin/
+│   │       ├── page.tsx   # Dashboard
+│   │       ├── orders/    # Quản lý đơn hàng
+│   │       └── products/  # Quản lý sản phẩm
+│   ├── api/
+│   │   ├── chat/          # Chatbot AI endpoint
+│   │   ├── orders/        # Tạo đơn hàng
+│   │   ├── products/      # Danh sách sản phẩm
+│   │   └── upload/        # Upload ảnh
+│   ├── actions/           # Server Actions
+│   ├── sitemap.ts         # Sitemap tự động
+│   ├── robots.ts          # robots.txt
+│   └── feed.xml/          # RSS Feed
+├── components/
+│   ├── blog/              # BlogCard, BlogSearch, MDXContent
+│   ├── shop/              # ProductCard, ShopFilter, CartIcon
+│   ├── admin/             # AddProductForm, EditProductDialog
+│   ├── chat/              # Chatbot
+│   └── layout/            # Navbar, Footer, ThemeToggle
+├── content/
+│   └── posts/             # File MDX bài viết
+├── db/
+│   ├── schema.ts          # Drizzle schema
+│   ├── index.ts           # DB client
+│   ├── migrations/        # SQL migrations
+│   └── seed.ts            # Dữ liệu mẫu
+└── lib/
+    ├── posts.ts           # Helper đọc MDX
+    ├── cart-store.ts      # Zustand cart state
+    └── email.ts           # Resend email helper
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev          # Dev server (Velite + Next.js)
+npm run build        # Production build
+npm run db:generate  # Tạo migration từ schema
+npm run db:migrate   # Chạy migration
+npm run db:studio    # Drizzle Studio (GUI DB)
+npm run db:seed      # Thêm dữ liệu mẫu
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Viết bài mới
 
-## Learn More
+Tạo file `.mdx` trong `content/posts/`:
 
-To learn more about Next.js, take a look at the following resources:
+```mdx
+---
+title: "Tiêu đề bài viết"
+date: "2026-05-08"
+summary: "Tóm tắt ngắn hiển thị ở danh sách."
+tags: ["nextjs", "tips"]
+published: true
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Nội dung bài viết ở đây...
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Velite tự động rebuild khi lưu file.

@@ -1,0 +1,56 @@
+---
+title: "5 tips dùng Next.js 15 hiệu quả hơn"
+date: "2026-05-06"
+summary: "Những mẹo thực tế giúp bạn tận dụng tối đa Next.js 15 App Router trong dự án thực tế."
+tags: ["nextjs", "tips"]
+published: true
+---
+
+## 1. Dùng Server Components mặc định
+
+Trong App Router, mọi component đều là Server Component theo mặc định. Chỉ thêm `"use client"` khi thực sự cần tương tác phía client.
+
+```tsx
+// Server Component — không cần "use client"
+export default async function Page() {
+  const data = await fetch("https://api.example.com/data");
+  return <div>{data}</div>;
+}
+```
+
+## 2. Tận dụng Parallel Routes
+
+Parallel Routes cho phép render nhiều trang cùng lúc trong cùng layout.
+
+```
+app/
+├── @modal/
+│   └── page.tsx
+├── layout.tsx
+└── page.tsx
+```
+
+## 3. Cache thông minh với `fetch`
+
+```tsx
+// Cache mãi mãi (static)
+fetch(url, { cache: "force-cache" });
+
+// Không cache (dynamic)
+fetch(url, { cache: "no-store" });
+
+// Revalidate sau 60 giây
+fetch(url, { next: { revalidate: 60 } });
+```
+
+## 4. Dùng `loading.tsx` cho Suspense tự động
+
+Tạo file `loading.tsx` trong bất kỳ thư mục nào để Next.js tự động wrap bằng Suspense.
+
+## 5. Turbopack cho dev nhanh hơn
+
+```bash
+next dev --turbopack
+```
+
+Nhanh hơn 10x so với Webpack trong development.
