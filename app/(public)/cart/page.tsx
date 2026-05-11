@@ -63,9 +63,7 @@ export default function CartPage() {
         <p className="text-muted-foreground">
           Cảm ơn bạn đã đặt hàng. Chúng tôi sẽ liên hệ xác nhận trong thời gian sớm nhất.
         </p>
-        <Button asChild>
-          <Link href="/shop">Tiếp tục mua sắm</Link>
-        </Button>
+        <Button render={<Link href="/shop" />}>Tiếp tục mua sắm</Button>
       </div>
     );
   }
@@ -74,9 +72,7 @@ export default function CartPage() {
     return (
       <div className="text-center py-20 space-y-4">
         <h1 className="text-2xl font-bold">Giỏ hàng trống</h1>
-        <Button asChild>
-          <Link href="/shop">Xem sản phẩm</Link>
-        </Button>
+        <Button render={<Link href="/shop" />}>Xem sản phẩm</Button>
       </div>
     );
   }

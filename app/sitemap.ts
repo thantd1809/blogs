@@ -6,11 +6,14 @@ import { eq } from "drizzle-orm";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
+export const dynamic = "force-dynamic";
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = getAllPosts();
   const allProducts = await db.select({ slug: products.slug, updatedAt: products.updatedAt })
     .from(products)
-    .where(eq(products.published, true));
+    .where(eq(products.published, true))
+    .catch(() => []);
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: SITE_URL, lastModified: new Date(), changeFrequency: "daily", priority: 1 },

@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { db } from "@/db";
 import { products } from "@/db/schema";
 import { toggleProductPublished, deleteProduct } from "@/app/actions/products";

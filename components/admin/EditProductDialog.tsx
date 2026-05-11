@@ -36,9 +36,7 @@ export function EditProductDialog({ product }: { product: Product }) {
 
   return (
     <Dialog open={open} onOpenChange={(o) => { setOpen(o); if (o) setImages(product.images ?? []); }}>
-      <DialogTrigger asChild>
-        <Button size="sm" variant="outline">Sửa</Button>
-      </DialogTrigger>
+      <DialogTrigger render={<Button size="sm" variant="outline" />}>Sửa</DialogTrigger>
       <DialogContent className="max-w-lg max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Sửa sản phẩm</DialogTitle>

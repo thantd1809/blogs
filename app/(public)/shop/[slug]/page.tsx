@@ -106,9 +106,7 @@ export default function ProductPage() {
             >
               Thêm vào giỏ hàng
             </Button>
-            <Button variant="outline" asChild>
-              <Link href="/cart">Xem giỏ hàng</Link>
-            </Button>
+            <Button variant="outline" render={<Link href="/cart" />}>Xem giỏ hàng</Button>
           </div>
         </div>
       </div>
