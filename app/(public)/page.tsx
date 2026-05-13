@@ -18,7 +18,7 @@ export default function HomePage() {
             Đọc Blog
           </Link>
           <Link href="/shop" className="border px-6 py-2 rounded-md hover:bg-muted">
-            Xem Shop Yến
+            Xem Shop
           </Link>
         </div>
       </section>
