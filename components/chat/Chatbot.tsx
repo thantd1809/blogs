@@ -18,8 +18,8 @@ export function Chatbot() {
       {
         id: "welcome",
         role: "assistant",
-        content: "Xin chào! Tôi là trợ lý tư vấn yến sào. Bạn cần tư vấn gì không? 🌿",
-        parts: [{ type: "text", text: "Xin chào! Tôi là trợ lý tư vấn yến sào. Bạn cần tư vấn gì không? 🌿" }],
+        content: "Xin chào! Tôi là trợ lý tư vấn shop. Bạn cần tư vấn gì không? 🌿",
+        parts: [{ type: "text", text: "Xin chào! Tôi là trợ lý tư vấn shop. Bạn cần tư vấn gì không? 🌿" }],
       },
     ],
   });
@@ -62,7 +62,7 @@ export function Chatbot() {
               <Bot className="w-5 h-5" />
             </div>
             <div>
-              <p className="font-semibold text-sm">Tư vấn Yến Sào</p>
+              <p className="font-semibold text-sm">Tư vấn Shop</p>
               <p className="text-xs opacity-80">Trả lời ngay lập tức</p>
             </div>
           </div>
@@ -124,7 +124,7 @@ export function Chatbot() {
           {/* Suggested questions */}
           {messages.length === 1 && (
             <div className="px-4 pb-2 flex gap-2 flex-wrap">
-              {["Yến sào có tác dụng gì?", "Giá yến tinh chế bao nhiêu?", "Cách đặt hàng?"].map((q) => (
+              {["Sản phẩm có gì?", "Cách đặt hàng?", "Giao hàng như thế nào?"].map((q) => (
                 <button
                   key={q}
                   onClick={() => sendMessage({ text: q })}

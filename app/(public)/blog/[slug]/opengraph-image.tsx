@@ -60,7 +60,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
 
         {/* Footer */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div style={{ fontSize: 24, color: "#64748b" }}>Blog & Yến Sào</div>
+          <div style={{ fontSize: 24, color: "#64748b" }}>Thanhtd&apos;s Blog</div>
           {date && <div style={{ fontSize: 24, color: "#64748b" }}>{date}</div>}
         </div>
       </div>

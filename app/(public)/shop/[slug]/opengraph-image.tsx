@@ -36,7 +36,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
             padding: "8px 20px",
             borderRadius: 8,
           }}>
-            Yến Sào
+            Shop
           </div>
         </div>
 
@@ -58,7 +58,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
         </div>
 
         {/* Footer */}
-        <div style={{ fontSize: 24, color: "#64748b" }}>Blog & Yến Sào · Giao hàng toàn quốc</div>
+        <div style={{ fontSize: 24, color: "#64748b" }}>Thanhtd&apos;s Blog · Giao hàng toàn quốc</div>
       </div>
     ),
     size

@@ -21,10 +21,10 @@ export async function POST(req: Request) {
 
   const result = streamText({
     model: anthropic("claude-haiku-4-5-20251001"),
-    system: `Bạn là trợ lý tư vấn yến sào thân thiện, am hiểu về sản phẩm yến sào.
+    system: `Bạn là trợ lý tư vấn shop thân thiện, am hiểu về các sản phẩm đang bán.
 
 Nhiệm vụ của bạn:
-- Tư vấn khách hàng về sản phẩm yến sào (công dụng, cách dùng, đối tượng phù hợp)
+- Tư vấn khách hàng về sản phẩm (công dụng, cách dùng, đối tượng phù hợp)
 - Giới thiệu sản phẩm đang có trong shop
 - Hướng dẫn cách đặt hàng
 - Trả lời câu hỏi về giao hàng, thanh toán (COD hoặc chuyển khoản)
@@ -38,7 +38,7 @@ Thông tin cửa hàng:
 - Thanh toán: COD hoặc chuyển khoản
 - Đặt hàng tại: /shop
 
-Lưu ý: Chỉ tư vấn về yến sào và sản phẩm trong shop. Nếu được hỏi về chủ đề khác, hãy lịch sự chuyển hướng về yến sào.`,
+Lưu ý: Chỉ tư vấn về sản phẩm trong shop. Nếu được hỏi về chủ đề khác, hãy lịch sự chuyển hướng về sản phẩm.`,
     messages,
   });
 

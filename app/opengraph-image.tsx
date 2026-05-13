@@ -20,7 +20,7 @@ export default function Image() {
         }}
       >
         <div style={{ fontSize: 72, fontWeight: 700, color: "#f8fafc", textAlign: "center", lineHeight: 1.2 }}>
-          Blog & Yến Sào
+          Thanhtd&apos;s Blog
         </div>
         <div style={{ fontSize: 32, color: "#94a3b8", textAlign: "center" }}>
           Công nghệ · Lập trình · Yến sào chất lượng

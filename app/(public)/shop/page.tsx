@@ -7,8 +7,8 @@ import { eq } from "drizzle-orm";
 import { ShopFilter } from "@/components/shop/ShopFilter";
 
 export const metadata: Metadata = {
-  title: "Shop Yến Sào",
-  description: "Yến sào chất lượng cao, nguồn gốc rõ ràng.",
+  title: "Shop",
+  description: "Sản phẩm chất lượng cao, nguồn gốc rõ ràng.",
 };
 
 export default async function ShopPage() {
@@ -17,9 +17,9 @@ export default async function ShopPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold">Shop Yến Sào</h1>
+        <h1 className="text-3xl font-bold">Shop</h1>
         <p className="text-muted-foreground mt-2">
-          Yến sào chất lượng cao, nguồn gốc rõ ràng, giao hàng toàn quốc.
+          Sản phẩm chất lượng cao, nguồn gốc rõ ràng, giao hàng toàn quốc.
         </p>
       </div>
 

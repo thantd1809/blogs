@@ -7,7 +7,7 @@ export function Navbar() {
     <header className="border-b">
       <nav className="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="font-bold text-lg">
-          Blog & Yến Sào
+          Thanhtd&apos;s Blog
         </Link>
         <div className="flex items-center gap-6">
           <Link href="/blog" className="text-sm hover:underline">Blog</Link>

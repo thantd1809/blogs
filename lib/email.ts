@@ -88,7 +88,7 @@ export async function sendOrderConfirmation({
 
   <p style="color:#64748b;font-size:13px;margin-top:32px">
     Nếu có thắc mắc, vui lòng liên hệ qua Zalo hoặc reply email này.<br/>
-    Trân trọng,<br/><strong>Blog & Yến Sào</strong>
+    Trân trọng,<br/><strong>Thanhtd's Blog</strong>
   </p>
 </body>
 </html>`,
