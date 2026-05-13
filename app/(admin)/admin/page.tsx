@@ -40,7 +40,7 @@ export default async function AdminPage() {
         </Link>
         <Link href="/admin/products" className="border rounded-lg p-6 hover:bg-muted space-y-1">
           <h2 className="font-semibold">Sản phẩm</h2>
-          <p className="text-sm text-muted-foreground">Quản lý sản phẩm yến sào</p>
+          <p className="text-sm text-muted-foreground">Quản lý sản phẩm</p>
         </Link>
         <Link href="/admin/posts" className="border rounded-lg p-6 hover:bg-muted space-y-1">
           <h2 className="font-semibold">Bài viết</h2>

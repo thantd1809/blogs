@@ -23,7 +23,7 @@ export default function Image() {
           Thanhtd&apos;s Blog
         </div>
         <div style={{ fontSize: 32, color: "#94a3b8", textAlign: "center" }}>
-          Công nghệ · Lập trình · Yến sào chất lượng
+          Công nghệ · Lập trình · Shop
         </div>
       </div>
     ),
