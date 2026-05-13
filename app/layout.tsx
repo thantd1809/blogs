@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: "Blog của tôi",
     template: "%s | Blog của tôi",
   },
-  description: "Blog về công nghệ, lập trình và shop yến sào.",
+  description: "Blog về công nghệ, lập trình và shop.",
   alternates: {
     types: {
       "application/rss+xml": "/feed.xml",
