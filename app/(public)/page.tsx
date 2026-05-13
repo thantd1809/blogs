@@ -11,7 +11,7 @@ export default function HomePage() {
       <section className="text-center py-16 space-y-4">
         <h1 className="text-4xl font-bold">Xin chào! 👋</h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-          Tôi chia sẻ về công nghệ, lập trình và cũng kinh doanh yến sào chất lượng cao.
+          Tôi chia sẻ về công nghệ, lập trình và những điều thú vị trong cuộc sống.
         </p>
         <div className="flex gap-4 justify-center">
           <Link href="/blog" className="bg-primary text-primary-foreground px-6 py-2 rounded-md hover:opacity-90">
@@ -53,7 +53,7 @@ export default function HomePage() {
       {/* Shop section */}
       <section className="space-y-4">
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-semibold">Sản phẩm yến sào</h2>
+          <h2 className="text-2xl font-semibold">Sản phẩm</h2>
           <Link href="/shop" className="text-sm text-muted-foreground hover:underline">
             Xem tất cả →
           </Link>
